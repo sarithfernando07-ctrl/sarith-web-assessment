@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse our premier catalog of collectible figurines, board games, toys, and diecast model cars at Toy Haven." />
+  <meta name="theme-color" content="#2563eb" />
+  <title>Shop Products | Toy Haven Catalog</title>
+
+  <!-- Favicon and PWA Manifest -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="icons/icon-192.svg" />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <span>🚚 <strong>Free UK Delivery</strong> on orders over £50!</span>
+      <span class="hide-sm">Collector Packaging &bull; Real-time Stock Availability</span>
+    </div>
+  </div>
+
+  <!-- Primary Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="header-brand" aria-label="Toy Haven Home">
+        <img src="images/logo.svg" alt="Toy Haven Logo" width="200" height="50" />
+      </a>
+
+      <nav class="main-nav" id="main-navigation" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="products.html" class="nav-link active">Shop Products</a></li>
+          <li><a href="wishlist.html" class="nav-link">Wishlist Vault</a></li>
+          <li><a href="cart.html" class="nav-link">Shopping Cart</a></li>
+          <li><a href="support.html" class="nav-link">Support &amp; FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="wishlist.html" class="action-btn" title="View Wishlist" aria-label="View Wishlist">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          <span class="counter-badge wishlist-counter-badge" style="display: none;">0</span>
+        </a>
+
+        <a href="cart.html" class="action-btn" title="View Shopping Cart" aria-label="View Shopping Cart">
+          <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          <span class="counter-badge cart-counter-badge" style="display: none;">0</span>
+        </a>
+
+        <button class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-navigation">
+          <span class="hamburger-line line-1"></span>
+          <span class="hamburger-line line-2"></span>
+          <span class="hamburger-line line-3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+    <!-- Page Intro Header -->
+    <div class="section-header">
+      <div>
+        <h1 class="section-title">Toy Haven Product Catalog</h1>
+        <p class="section-subtitle">Browse through our complete collection of collector figurines, strategic board games, toys, and diecast models.</p>
+      </div>
+    </div>
+
+    <!-- Filter & Search Toolbar -->
+    <section class="filter-toolbar" aria-label="Product Search and Filter Controls">
+      <div class="toolbar-top">
+        <!-- Live Search Input -->
+        <div class="search-wrapper">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <label for="product-search" class="sr-only">Search products by name or keywords</label>
+          <input type="search" id="product-search" class="search-input" placeholder="Search by name, category, or keyword..." />
+        </div>
+
+        <!-- Sort Select -->
+        <div class="toolbar-sort">
+          <label for="product-sort" class="form-label" style="margin-bottom: 0;">Sort By:</label>
+          <select id="product-sort" class="sort-select">
+            <option value="featured">Featured Picks</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="name-az">Name: A to Z</option>
+            <option value="rating">Customer Rating</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="category-pills" role="tablist" aria-label="Filter products by category">
+        <button class="pill-btn active" data-category="all" role="tab" aria-selected="true">All Products</button>
+        <button class="pill-btn" data-category="Figurines" role="tab" aria-selected="false">Collectible Figurines</button>
+        <button class="pill-btn" data-category="Board Games" role="tab" aria-selected="false">Board Games</button>
+        <button class="pill-btn" data-category="Toys" role="tab" aria-selected="false">Toys &amp; Models</button>
+        <button class="pill-btn" data-category="Diecast Cars" role="tab" aria-selected="false">Diecast Model Cars</button>
+      </div>
+    </section>
+
+    <!-- Results Count -->
+    <div class="results-meta">
+      <span id="results-count">Showing 16 of 16 products</span>
+      <span style="font-size: 0.8rem; color: #64748b;">Tip: Click any item or the eye icon for specifications and details.</span>
+    </div>
+
+    <!-- Product Grid (Populated dynamically) -->
+    <div class="product-grid" id="products-grid"></div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col-about">
+          <a href="index.html">
+            <img src="images/logo.svg" alt="Toy Haven Logo" class="footer-logo" width="180" height="45" />
+          </a>
+          <p class="footer-desc">
+            Toy Haven is a modern online platform bringing together collectible figurines, strategic board games, classic toys, and precision diecast model cars in one immersive space.
+          </p>
+          <div style="font-size: 0.85rem; color: #94a3b8;">
+            📍 College Road, Stoke-on-Trent, Staffordshire ST4 2DE<br />
+            📞 Helpline: +44 (0)1782 294000
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Shop Categories</h3>
+          <ul class="footer-links">
+            <li><a href="products.html?category=Figurines">Collectible Figurines</a></li>
+            <li><a href="products.html?category=Board%20Games">Board Games &amp; Euro</a></li>
+            <li><a href="products.html?category=Toys">Creative Toys &amp; Robots</a></li>
+            <li><a href="products.html?category=Diecast%20Cars">Diecast Model Cars</a></li>
+            <li><a href="products.html">All New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Customer Care</h3>
+          <ul class="footer-links">
+            <li><a href="wishlist.html">My Wishlist Vault</a></li>
+            <li><a href="cart.html">View Shopping Cart</a></li>
+            <li><a href="checkout.html">Checkout &amp; Orders</a></li>
+            <li><a href="support.html">Feedback &amp; Inquiries</a></li>
+            <li><a href="support.html#faq">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Collector's Dispatch</h3>
+          <p class="footer-desc" style="margin-bottom: 1rem;">
+            Subscribe to receive alerts on rare restocks, exclusive pre-orders, and member promotions.
+          </p>
+          <form class="newsletter-form" id="footer-newsletter-form">
+            <div class="newsletter-input-group">
+              <label for="newsletter-email-products" class="sr-only">Email address for newsletter</label>
+              <input type="email" id="newsletter-email-products" class="newsletter-input" placeholder="Enter your email address..." required />
+              <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+            </div>
+            <p class="newsletter-disclaimer">We respect your inbox. Unsubscribe at any time.</p>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Toy Haven Ltd. COMP40053 Assignment 3 &bull; University of Staffordshire.</p>
+        <div class="footer-badges">
+          <span class="payment-badge">VISA</span>
+          <span class="payment-badge">Mastercard</span>
+          <span class="payment-badge">PayPal</span>
+          <span class="payment-badge">Cash on Delivery</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js?v=4.0"></script>
+  <script src="js/main.js?v=4.0"></script>
+  <script src="js/products.js?v=4.0"></script>
+</body>
+</html>
