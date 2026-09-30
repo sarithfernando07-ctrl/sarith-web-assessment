@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+  </defs>
+  <!-- Icon Mark: Modern stylized collector toy box / cube -->
+  <g transform="translate(10, 8)">
+    <rect x="0" y="8" width="36" height="36" rx="8" fill="url(#logoGrad)" />
+    <!-- Toy Block / Haven Spark -->
+    <path d="M18 14 L24 24 L34 25 L26 32 L28 42 L18 36 L8 42 L10 32 L2 25 L12 24 Z" fill="url(#accentGrad)" transform="scale(0.65) translate(8, 6)" />
+    <circle cx="28" cy="14" r="3" fill="#ffffff" opacity="0.9" />
+  </g>
+  <!-- Text -->
+  <text x="60" y="32" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="800" font-size="24" fill="#0f172a" letter-spacing="-0.5">TOY<tspan fill="#2563eb">HAVEN</tspan></text>
+  <text x="61" y="46" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="600" font-size="9.5" fill="#64748b" letter-spacing="2.2">COLLECTIBLES &amp; HOBBY</text>
+</svg>
